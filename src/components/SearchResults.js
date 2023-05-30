@@ -75,16 +75,24 @@ const SearchResults = ({ params }) => {
           </li>
         ))}
       </ul>
-      <div className="home__pagination pagination">
-        {Array.from({ length: totalMoviePages }, (_, index) => index + 1).map((pageNumber) => (
+      <div className="home__pagination">
+        {currentMoviePage > 1 && (
           <button
-            key={pageNumber}
-            onClick={() => handleMoviePageChange(pageNumber)}
-            className={`home__pagination-button ${pageNumber === currentMoviePage ? 'active' : ''}`}
+            className="home__pagination-button home__pagination-previous"
+            onClick={() => handleMoviePageChange(currentMoviePage - 1)}
           >
-            {pageNumber}
+            &#8249;
           </button>
-        ))}
+        )}
+        <span className="home__pagination-page">{currentMoviePage}</span>
+        {currentMoviePage < totalMoviePages && (
+          <button
+            className="home__pagination-button home__pagination-next"
+            onClick={() => handleMoviePageChange(currentMoviePage + 1)}
+          >
+            &#8250;
+          </button>
+        )}
       </div>
 
       <h1 className="search-results-title">TV Show Results for "{query}"</h1>
@@ -101,16 +109,24 @@ const SearchResults = ({ params }) => {
           </li>
         ))}
       </ul>
-      <div className="home__pagination pagination">
-        {Array.from({ length: totalTVShowPages }, (_, index) => index + 1).map((pageNumber) => (
+      <div className="home__pagination">
+        {currentTVShowPage > 1 && (
           <button
-            key={pageNumber}
-            onClick={() => handleTVShowPageChange(pageNumber)}
-            className={`home__pagination-button ${pageNumber === currentTVShowPage ? 'active' : ''}`}
+            className="home__pagination-button home__pagination-previous"
+            onClick={() => handleTVShowPageChange(currentTVShowPage - 1)}
           >
-            {pageNumber}
+            &#8249;
           </button>
-        ))}
+        )}
+        <span className="home__pagination-page">{currentTVShowPage}</span>
+        {currentTVShowPage < totalTVShowPages && (
+          <button
+            className="home__pagination-button home__pagination-next"
+            onClick={() => handleTVShowPageChange(currentTVShowPage + 1)}
+          >
+            &#8250;
+          </button>
+        )}
       </div>
     </div>
   );
