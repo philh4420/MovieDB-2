@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import { Router, Route } from 'wouter';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import SearchResults from './components/SearchResults';
 import './App.css';
 
-function App() {
+// Add the Font Awesome icon to the library
+library.add(faSearch);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Route path="/" component={Home} />
+        <Route path="/search/:query" component={SearchResults} />
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

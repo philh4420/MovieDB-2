@@ -1,0 +1,163 @@
+.home {
+  background-color: #000;
+  padding: 80px 0 150px 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.home__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 20px;
+  padding-right: 40px;
+}
+
+.home__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home__item:hover {
+  transform: scale(1.01);
+}
+
+.home__image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0 0;
+}
+
+.home__details {
+  padding: 10px;
+  color: #fff;
+}
+
+.home__title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.home__release-date,
+.home__air-date,
+.home__rating {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.home__overview {
+  font-size: 20px;
+  line-height: 1.4;
+  max-height: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.home__pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home__pagination-button:hover {
+  background-color: #111;
+}
+
+.home__pagination-page {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    padding: 100px 0;
+  }
+
+  .home__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .home__item {
+    flex-direction: row;
+  }
+
+  .home__image {
+    width: 100px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .home__details {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 80px 0;
+  }
+
+  .home__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .home__item {
+    flex-direction: column;
+  }
+
+  .home__image {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .home__details {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home__item {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .home__image {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .home__details {
+    padding: 10px;
+  }
+}
