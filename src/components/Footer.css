@@ -1,10 +1,8 @@
-/* Footer.css */
-
 .footer {
   background-color: #141414;
-  padding: 20px;
+  padding: 1.25rem;
   color: white;
-  margin-top: 84px;
+  margin-top: 5.25rem;
   bottom: 0;
   left: 0;
   position: fixed;
@@ -16,16 +14,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 0 auto;
 }
 
 .footer__logo {
-  padding: 10px 50px;
+  padding: 0.625rem 3.125rem;
 }
 
 .footer__logo img {
-  height: 30px;
+  height: 1.875rem;
   cursor: pointer;
 }
 
@@ -37,13 +35,13 @@
 }
 
 .footer__social-icon-item {
-  margin-right: 10px;
-  padding: 10px 10px;
+  margin-right: 0.625rem;
+  padding: 0.625rem 0.625rem;
 }
 
 .footer__social-icons-list a {
   color: white;
-  font-size: 24px;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -51,13 +49,13 @@
   color: #e50914;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 36rem) {
   .footer__details {
     flex-wrap: wrap;
   }
 
   /* .footer__logo {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   } */
 
   .footer__social-icons-list {

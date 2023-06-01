@@ -2,16 +2,16 @@
   background-color: #000;
   color: #fff;
   font-size: 1rem;
-  padding: 5rem 1.25rem 5rem 1.25rem;
+  padding: 5rem 1.25rem;
 }
 
 .search-results-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #fff;
 }
 
@@ -34,9 +34,9 @@
 .movie-results-list,
 .tv-show-results-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 20px;
-  padding-right: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 1.25rem;
+  padding-right: 2.5rem;
 }
 
 .movie-result-item,
@@ -45,49 +45,45 @@
   flex-direction: column;
   background-color: #000;
   border: 1px solid #fff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .movie-result-item:hover,
 .tv-show-result-item:hover {
   transform: scale(1.01);
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
 }
 
 .home__image {
   width: 100%;
   height: auto;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .movie-result-details,
 .tv-show-result-details {
-  padding: 10px;
+  padding: 0.625rem;
   color: #fff;
 }
 
 .home__title {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .home__release-date,
 .home__air-date,
 .home__rating {
-  font-size: 20px;
-  margin-bottom: 5px;
+  font-size: 1.25rem;
+  margin-bottom: 0.3125rem;
 }
 
 .home__overview {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.4;
-  max-height: 200px;
+  max-height: 12.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -96,21 +92,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  padding: 15px;
+  margin-top: 1.25rem;
+  padding: 0.9375rem;
 }
 
 .home__pagination-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #e50914;
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -120,55 +116,56 @@
 }
 
 .home__pagination-page {
-  margin: 0 10px;
-  font-size: 18px;
+  margin: 0 0.625rem;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   .search-results {
-    padding: 100px 0 100px 0;
-  }
-
-  .movie-result-item,
-  .tv-show-result-item {
-    flex-direction: row;
-  }
-
-  .home__image {
-    width: 100px;
-    border-radius: 4px 0 0 4px;
-  }
-
-  .movie-result-details,
-  .tv-show-result-details {
-    padding: 10px 10px 10px 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .search-results {
-    padding: 80px 0 150px 0;
+    padding: 10rem 1.25rem;
   }
 
   .movie-results-list,
   .tv-show-results-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .movie-result-item,
-  .tv-show-result-item {
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   }
 
   .home__image {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
+    width: 6.25rem;
+    border-radius: 0.25rem 0 0 0.25rem;
   }
 
   .movie-result-details,
   .tv-show-result-details {
-    padding: 10px;
+    padding: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .search-results {
+    padding: 8rem 1.25rem;
+  }
+
+  .movie-results-list,
+  .tv-show-results-list {
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  }
+
+  .home__image {
+    width: 9.375rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  .movie-result-details,
+  .tv-show-result-details {
+    padding: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .search-results-title {
+    font-size: 2rem;
   }
 }

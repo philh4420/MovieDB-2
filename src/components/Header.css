@@ -1,8 +1,6 @@
-/* Header.css */
-
 .header {
   background-color: #141414;
-  padding: 20px;
+  padding: 1.25rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,12 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 0 auto;
 }
 
 .header__logo img {
-  height: 40px;
+  height: 2.5rem;
   cursor: pointer;
 }
 
@@ -27,7 +25,7 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   position: relative;
 }
 
@@ -35,10 +33,10 @@
   width: 100%;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 0.125rem solid white;
   color: white;
-  padding: 8px;
-  font-size: 16px;
+  padding: 0.5rem;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
@@ -49,7 +47,7 @@
 
 .header__search .visually-hidden {
   position: absolute;
-  left: -9999px;
+  left: -9999rem;
 }
 
 .header__search button {
@@ -57,12 +55,12 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .header__search button .search-icon {
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: color 0.3s ease;
 }
 
@@ -79,12 +77,12 @@
   background-color: #e50914;
   color: white;
   border: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.25rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .header__home-button:hover {
@@ -92,23 +90,23 @@
 }
 
 /* Added styles for responsiveness */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 81.25rem) {
   .header__details {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 36rem) {
   .header__details {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .header__search {
-    margin: 10px 0;
+    margin: 0.625rem 0;
   }
 
   .header__home-button {
-    margin: 10px 0 0;
+    margin: 0.625rem 0 0;
   }
 }

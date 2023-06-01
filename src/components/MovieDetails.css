@@ -84,3 +84,55 @@ body {
 .movie-details__cast-image-button:hover {
   background-color: #e20a10;
 }
+
+@media screen and (max-width: 37.5rem) {
+  .movie-details__container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .movie-details__poster {
+    width: 100%;
+    max-width: 31.25rem;
+  }
+
+  .movie-details__cast-images {
+    gap: 0.625rem;
+  }
+
+  .movie-details__cast-image {
+    width: 100%;
+    max-width: 12.5rem;
+  }
+
+  .movie-details__cast-image-poster {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .movie-details__poster {
+    max-width: 50%;
+  }
+
+  .movie-details__cast-images {
+    gap: 1.25rem;
+  }
+
+  .movie-details__cast-image {
+    max-width: 25%;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.8rem;
+  }
+}

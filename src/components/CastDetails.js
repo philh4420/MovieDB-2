@@ -86,17 +86,28 @@ const CastDetails = () => {
     gender,
   } = castDetails;
 
+  const formatDateUK = (dateString) => {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.toLocaleString('en-GB', { month: 'long' });
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+  };
+
   return (
     <div className="cast-details">
       <div className="cast-details__header">
-        <img className="cast-details__profile-image" src={`https://image.tmdb.org/t/p/w500/${profile_path}`} alt={name} />
-
+        <img
+          className="cast-details__profile-image"
+          src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+          alt={name}
+        />
       </div>
       <div className="cast-details__content">
         <div className="cast-details__name">{name}</div>
         <div className="cast-details__biography">{biography}</div>
         <div className="cast-details__personal-info">
-          <span className="cast-details__personal-info-label">Birthday:</span> {birthday}
+          <span className="cast-details__personal-info-label">Birthday:</span> {formatDateUK(birthday)}
         </div>
         <div className="cast-details__personal-info">
           <span className="cast-details__personal-info-label">Place of Birth:</span> {place_of_birth}
