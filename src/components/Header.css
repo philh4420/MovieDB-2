@@ -71,6 +71,7 @@
 .header__buttons {
   display: flex;
   align-items: center;
+  margin-left: 0.625rem;
 }
 
 .header__home-button {
@@ -107,6 +108,7 @@
   }
 
   .header__home-button {
-    margin: 0.625rem 0 0;
+    margin-top: 0.625rem;
+    margin-left: auto;
   }
 }
