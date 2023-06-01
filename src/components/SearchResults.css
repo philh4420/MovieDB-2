@@ -106,7 +106,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #e50914;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -116,7 +116,7 @@
 }
 
 .home__pagination-button:hover {
-  background-color: #111;
+  background-color: #b2070a;
 }
 
 .home__pagination-page {
