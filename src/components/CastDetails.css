@@ -1,0 +1,93 @@
+.cast-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 6.25rem);
+  background-color: #000;
+}
+
+.cast-details__header {
+  display: flex;
+  align-items: center;
+  margin: 10rem 0 15rem 0;
+  padding: 0 3.125rem;
+}
+
+.cast-details__profile-image {
+  width: 37.5rem;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1.25rem;
+}
+
+.cast-details__name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 6.25rem 0;
+}
+
+.cast-details__content {
+  flex: 1;
+  overflow-y: auto;
+  color: #fff;
+  margin: 10rem 0 15rem 0;
+  font-size: 1.5rem;
+}
+
+.cast-details__biography {
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__personal-info {
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__personal-info-label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.cast-details__social-links {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__social-links a {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.cast-details__social-links a:hover {
+  color: #e50914;
+}
+
+/* Responsive styles */
+
+@media (max-width: 48rem) {
+  .cast-details {
+    height: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .cast-details__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cast-details__profile-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .cast-details__name {
+    font-size: 1.25rem;
+  }
+}

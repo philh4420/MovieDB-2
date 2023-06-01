@@ -1,0 +1,86 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5rem 1.25rem 5rem 1.25rem;
+}
+
+.movie-details__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.movie-details__container {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.movie-details__poster {
+  width: 31.25rem;
+}
+
+.movie-details__info {
+  flex: 1;
+}
+
+.movie-details__overview {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__release-date,
+.movie-details__runtime,
+.movie-details__rating,
+.movie-details__genres {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.movie-details__cast {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__cast-images {
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.movie-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__cast-image-poster {
+  width: 11.25rem;
+  height: 16.875rem;
+  object-fit: cover;
+}
+
+.movie-details__cast-image-name {
+  font-size: 1rem;
+  margin-top: 0.625rem;
+}
+
+.movie-details__cast-image-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.movie-details__cast-image-button:hover {
+  background-color: #e20a10;
+}

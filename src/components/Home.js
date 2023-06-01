@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Home.css';
+import { Link } from 'wouter';
 
 const apiKey = 'e7811799fcbd2c5fe1c7eed7a7955b7d';
 
@@ -57,6 +58,10 @@ const Home = () => {
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-GB', options);
   };
+  // eslint-disable-next-line
+  const moviePagination = Array.from({ length: totalMoviePages }, (_, index) => index + 1);
+  // eslint-disable-next-line
+  const tvShowPagination = Array.from({ length: totalTVShowPages }, (_, index) => index + 1);
 
   return (
     <div className="home">
@@ -70,19 +75,30 @@ const Home = () => {
               <p className="home__release-date">Release Date: {formatDateUK(movie.release_date)}</p>
               <p className="home__rating">Rating: {movie.vote_average}</p>
               <p className="home__overview">{movie.overview}</p>
+              <Link to={`/movies/${movie.id}`}>
+                <button className="home__details-button">View Details</button>
+              </Link>
             </div>
           </li>
         ))}
       </ul>
       <div className="home__pagination">
         {currentMoviePage > 1 && (
-          <button className="home__pagination-button home__pagination-previous" onClick={() => handleMoviePageChange(currentMoviePage - 1)}>
+          <button
+            className="home__pagination-button home__pagination-previous"
+            onClick={() => handleMoviePageChange(currentMoviePage - 1)}
+          >
             &#8249;
           </button>
         )}
-        <span className="home__pagination-page">{currentMoviePage}</span>
+        <span className="home__pagination-page">
+          Page {currentMoviePage} of {totalMoviePages}
+        </span>
         {currentMoviePage < totalMoviePages && (
-          <button className="home__pagination-button home__pagination-next" onClick={() => handleMoviePageChange(currentMoviePage + 1)}>
+          <button
+            className="home__pagination-button home__pagination-next"
+            onClick={() => handleMoviePageChange(currentMoviePage + 1)}
+          >
             &#8250;
           </button>
         )}
@@ -95,22 +111,33 @@ const Home = () => {
             <img src={`https://image.tmdb.org/t/p/w500/${tvShow.poster_path}`} alt={tvShow.name} className="home__image" />
             <div className="home__details">
               <h2 className="home__title">{tvShow.name}</h2>
-              <p className="home__air-date">First Air Date: {formatDateUK(tvShow.first_air_date)}</p>
+              <p className="home__air-date">Air Date: {formatDateUK(tvShow.first_air_date)}</p>
               <p className="home__rating">Rating: {tvShow.vote_average}</p>
               <p className="home__overview">{tvShow.overview}</p>
+              <Link to={`/tvshows/${tvShow.id}`}>
+                <button className="home__details-button">View Details</button>
+              </Link>
             </div>
           </li>
         ))}
       </ul>
       <div className="home__pagination">
         {currentTVShowPage > 1 && (
-          <button className="home__pagination-button home__pagination-previous" onClick={() => handleTVShowPageChange(currentTVShowPage - 1)}>
+          <button
+            className="home__pagination-button home__pagination-previous"
+            onClick={() => handleTVShowPageChange(currentTVShowPage - 1)}
+          >
             &#8249;
           </button>
         )}
-        <span className="home__pagination-page">{currentTVShowPage}</span>
+        <span className="home__pagination-page">
+          Page {currentTVShowPage} of {totalTVShowPages}
+        </span>
         {currentTVShowPage < totalTVShowPages && (
-          <button className="home__pagination-button home__pagination-next" onClick={() => handleTVShowPageChange(currentTVShowPage + 1)}>
+          <button
+            className="home__pagination-button home__pagination-next"
+            onClick={() => handleTVShowPageChange(currentTVShowPage + 1)}
+          >
             &#8250;
           </button>
         )}

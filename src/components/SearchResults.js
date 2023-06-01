@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SearchResults.css';
+import { Link } from 'wouter';
 
 const SearchResults = ({ params }) => {
   const apiKey = 'e7811799fcbd2c5fe1c7eed7a7955b7d'; // Replace 'YOUR_TMDB_API_KEY' with your actual TMDB API key
-  const query = params.query;
+  const query = decodeURIComponent(params.query);
 
   const [movieResults, setMovieResults] = useState([]);
   const [tvShowResults, setTVShowResults] = useState([]);
@@ -71,6 +72,9 @@ const SearchResults = ({ params }) => {
               <p className="home__release-date">Release Date: {formatDateUK(result.release_date)}</p>
               <p className="home__rating">Rating: {result.vote_average}</p>
               <p className="home__overview">{result.overview}</p>
+              <Link href={`/movies/${result.id}`}>
+                <button className="search__details-button">View Details</button>
+              </Link>
             </div>
           </li>
         ))}
@@ -84,7 +88,9 @@ const SearchResults = ({ params }) => {
             &#8249;
           </button>
         )}
-        <span className="home__pagination-page">{currentMoviePage}</span>
+        <span className="home__pagination-page">
+          Page {currentMoviePage} of {totalMoviePages}
+        </span>
         {currentMoviePage < totalMoviePages && (
           <button
             className="home__pagination-button home__pagination-next"
@@ -105,6 +111,9 @@ const SearchResults = ({ params }) => {
               <p className="home__air-date">First Air Date: {formatDateUK(result.first_air_date)}</p>
               <p className="home__rating">Rating: {result.vote_average}</p>
               <p className="home__overview">{result.overview}</p>
+              <Link href={`/tvshows/${result.id}`}>
+                <button className="search__details-button">View Details</button>
+              </Link>
             </div>
           </li>
         ))}
@@ -118,7 +127,9 @@ const SearchResults = ({ params }) => {
             &#8249;
           </button>
         )}
-        <span className="home__pagination-page">{currentTVShowPage}</span>
+        <span className="home__pagination-page">
+          Page {currentTVShowPage} of {totalTVShowPages}
+        </span>
         {currentTVShowPage < totalTVShowPages && (
           <button
             className="home__pagination-button home__pagination-next"

@@ -46,6 +46,11 @@ const Header = () => {
             <FontAwesomeIcon icon="search" className="search-icon" />
           </button>
         </form>
+        <div className="header__buttons">
+          <Link href="/">
+            <button className="header__home-button">Home</button>
+          </Link>
+        </div>
       </div>
     </header>
   );
