@@ -80,7 +80,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #333;
+  background-color: #e50914;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -90,7 +90,7 @@
 }
 
 .home__pagination-button:hover {
-  background-color: #111;
+  background-color: #b2070a;
 }
 
 .home__pagination-page {
@@ -102,6 +102,22 @@
 
 .home__pagination-total-pages {
   padding-right: 0.625rem;
+}
+
+.home__details-button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home__details-button:hover {
+  background-color: #b2070a;
 }
 
 @media screen and (max-width: 37.5rem) {
@@ -150,6 +166,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 30rem) {
   .home__item {
     border-radius: 0;
@@ -165,20 +183,4 @@
   .home__details {
     padding: 0.625rem;
   }
-}
-
-.home__details-button {
-  background-color: #e50914;
-  color: #fff;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding: 0.625rem 1.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.home__details-button:hover {
-  background-color: #b2070a;
 }
