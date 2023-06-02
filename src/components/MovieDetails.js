@@ -67,7 +67,7 @@ const MovieDetails = (props) => {
   };
 
   if (!movieDetails) {
-    return <div>Loading...</div>;
+    return <div className='cast-details__loading'>Loading...</div>;
   }
 
   const { title, overview, release_date, runtime, vote_average, genres, poster_path } = movieDetails;

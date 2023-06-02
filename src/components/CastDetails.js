@@ -71,7 +71,7 @@ const CastDetails = () => {
   };
 
   if (!castDetails) {
-    return <div>Loading...</div>;
+    return <div className='cast-details__loading'>Loading...</div>;
   }
 
   const {

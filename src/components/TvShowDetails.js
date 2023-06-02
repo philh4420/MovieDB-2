@@ -67,7 +67,7 @@ const TVShowDetails = () => {
   };
 
   if (!tvShowDetails) {
-    return <div>Loading...</div>;
+    return <div className='cast-details__loading'>Loading...</div>;
   }
 
   const { name, overview, first_air_date, episode_run_time, vote_average, genres, poster_path } = tvShowDetails;
