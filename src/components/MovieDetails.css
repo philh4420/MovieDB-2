@@ -18,6 +18,7 @@ body {
 
 .movie-details__poster {
   width: 31.25rem;
+  height: 100%;
 }
 
 .movie-details__info {
