@@ -1,0 +1,60 @@
+.tv-show-details__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tv-show-details__container {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.tv-show-details__poster {
+  width: 31.25rem;
+}
+
+.tv-show-details__info {
+  flex: 1;
+}
+
+.tv-show-details__overview {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.tv-show-details__first-air-date,
+.tv-show-details__episode-runtime,
+.tv-show-details__rating,
+.tv-show-details__genres {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.tv-show-details__cast {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tv-show-details__cast-images {
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.tv-show-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.tv-show-details__cast-image-poster {
+  width: 11.25rem;
+  height: 16.875rem;
+  object-fit: cover;
+}
+
+.tv-show-details__cast-image-name {
+  font-size: 1rem;
+  margin-top: 0.625rem;
+}

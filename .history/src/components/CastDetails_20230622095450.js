@@ -1,0 +1,1 @@
+sw.js: 1  Uncaught(in promise) DOMException: The service worker navigation preload request was cancelled before 'preloadResponse' settled.If you intend to use 'preloadResponse', use waitUntil() or respondWith() to wait for the promise to settle.

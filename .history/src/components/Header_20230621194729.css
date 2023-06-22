@@ -1,0 +1,134 @@
+.header {
+  background-color: #141414;
+  padding: 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 81.25rem;
+  margin: 0 auto;
+}
+
+.header__logo img {
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 1.25rem;
+  position: relative;
+}
+
+.header__search #searchInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.125rem solid white;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.header__search #searchInput:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.header__search .visually-hidden {
+  position: absolute;
+  left: -9999rem;
+}
+
+.header__search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.625rem;
+}
+
+.header__search button .search-icon {
+  color: white;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+.header__search button:hover .search-icon {
+  color: #e50914;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  margin: 0.625rem;
+}
+
+.header__home-button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 0.625rem;
+}
+
+.header__home-button:hover {
+  background-color: #b2070a;
+}
+
+.header__advanced-search-button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 0.625rem;
+}
+
+.header__advanced-search-button:hover {
+  background-color: #b2070a;
+}
+
+/* Added styles for responsiveness */
+@media screen and (max-width: 81.25rem) {
+  .header__details {
+    padding: 0 1.25rem;
+  }
+}
+
+@media screen and (max-width: 36rem) {
+  .header__details {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    margin-bottom: 0.625rem;
+  }
+
+  .header__search {
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+
+  .header__search button {
+    margin-left: auto;
+  }
+}

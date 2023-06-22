@@ -1,0 +1,248 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5rem 1.25rem 5rem 1.25rem;
+}
+
+.movie-details__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.movie-details__container {
+  display: flex;
+  gap: 2.5rem;
+  margin: 2.5rem;
+}
+
+.movie-details__poster {
+  width: 31.25rem;
+  height: 100%;
+}
+
+.movie-details__info {
+  flex: 1;
+}
+
+.movie-details__overview {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__release-date,
+.movie-details__runtime,
+.movie-details__rating,
+.movie-details__genres {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.movie-details__cast {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__cast-images {
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.movie-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.movie-details__cast-image-poster {
+  width: 11.25rem;
+  height: 16.875rem;
+  object-fit: cover;
+}
+
+.movie-details__cast-image-name {
+  font-size: 1rem;
+  margin-top: 0.625rem;
+}
+
+.movie-details__cast-image-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.movie-details__cast-image-button:hover {
+  background-color: #e20a10;
+}
+
+.trailer-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.trailer-button:hover {
+  background-color: #e20a10;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.001rem;
+  right: 0.25rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal__video {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.modal__video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.movie-details__website {
+  font-size: 1.2rem;
+  margin-top: 0.625rem;
+}
+
+.movie-details__website-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.movie-details__social-media {
+  font-size: 1.2rem;
+  margin-top: 1.25rem;
+}
+
+.movie-details__social-media p {
+  margin-bottom: 0.625rem;
+}
+
+.movie-details__social-media-icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.movie-details__social-media-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.movie-details__social-media-link:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 37.5rem) {
+  .movie-details__container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .movie-details__poster {
+    width: 100%;
+    max-width: 31.25rem;
+  }
+
+  .movie-details__cast-images {
+    gap: 0.625rem;
+  }
+
+  .movie-details__cast-image {
+    width: 100%;
+    max-width: 12.5rem;
+  }
+
+  .movie-details__cast-image-poster {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .modal {
+    top: 20%;
+    height: 100%;
+  }
+
+  .modal__close {
+    position: relative;
+    top: 0.001rem;
+    /* right: 0.25rem; */
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .modal__video {
+    padding-bottom: 70%;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .movie-details__poster {
+    max-width: 50%;
+  }
+
+  .movie-details__cast-images {
+    gap: 1.25rem;
+  }
+
+  .movie-details__cast-image {
+    max-width: 25%;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.8rem;
+  }
+}
