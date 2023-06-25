@@ -1,0 +1,83 @@
+/* Update the background color */
+.movie-details {
+  background-color: #1f1f1f;
+}
+
+/* Adjust the container styles */
+.movie-details__container {
+  padding: 2.5rem;
+  margin: 2.5rem auto;
+  max-width: 80%;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.625rem;
+}
+
+/* Style the movie title */
+.movie-details__title {
+  margin-bottom: 1.5rem;
+}
+
+/* Style the movie overview */
+.movie-details__overview {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Style the trailer button */
+.trailer-button {
+  margin-top: 1.5rem;
+}
+
+/* Style the website link */
+.movie-details__website-link {
+  font-weight: bold;
+}
+
+/* Style the social media icons */
+.movie-details__social-media-link {
+  font-size: 2.2rem;
+}
+
+/* Style the cast images */
+.movie-details__cast-images {
+  gap: 2rem;
+}
+
+/* Style the cast image name */
+.movie-details__cast-image-name {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Add hover effect to cast images */
+.movie-details__cast-image:hover .movie-details__cast-image-poster {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .movie-details__container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 90%;
+  }
+
+  .trailer-button {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movie-details__title {
+    font-size: 2rem;
+  }
+
+  .movie-details__overview {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .movie-details__cast-image-name {
+    font-size: 1rem;
+  }
+}

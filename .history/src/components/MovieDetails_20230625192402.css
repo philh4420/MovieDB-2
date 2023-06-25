@@ -1,0 +1,182 @@
+/* Update the font styles */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add a background image */
+.movie-details {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Adjust the container styles */
+.movie-details__container {
+  padding: 2.5rem;
+  margin: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
+}
+
+/* Style the movie title */
+.movie-details__title {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+/* Style the movie overview */
+.movie-details__overview {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* Style the trailer button */
+.trailer-button {
+  margin-top: 1.5rem;
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.trailer-button:hover {
+  background-color: #e20a10;
+  transform: scale(1.05);
+}
+
+/* Style the website link */
+.movie-details__website-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  transition: color 0.3s;
+}
+
+.movie-details__website-link:hover {
+  text-decoration: underline;
+  color: #e20a10;
+}
+
+/* Style the social media icons */
+.movie-details__social-media-link {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: opacity 0.3s;
+}
+
+.movie-details__social-media-link:hover {
+  opacity: 0.8;
+}
+
+/* Style the cast images */
+.movie-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s;
+}
+
+.movie-details__cast-image-poster {
+  width: 11.25rem;
+  height: 16.875rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.movie-details__cast-image-name {
+  font-size: 1rem;
+  margin-top: 0.625rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.movie-details__cast-image-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.movie-details__cast-image-button:hover {
+  background-color: #e20a10;
+  transform: scale(1.05);
+}
+
+/* Update the modal styles */
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* Update the modal close button styles */
+.modal__close {
+  top: 0.001rem;
+  right: 0.25rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal__close:hover {
+  color: #e20a10;
+}
+
+/* Update the modal video styles */
+.modal__video {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.modal__video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 37.5rem) {
+  .movie-details__container {
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .movie-details__cast-image {
+    width: 50%;
+    max-width: 12.5rem;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.8rem;
+  }
+}

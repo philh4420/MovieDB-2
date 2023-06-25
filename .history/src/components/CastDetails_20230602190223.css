@@ -1,0 +1,129 @@
+.cast-details__loading {
+  padding-top: 2rem;
+}
+
+.cast-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  height: calc(100vh - 3rem 0 3rem 0);
+  background-color: #000;
+}
+
+.cast-details__header {
+  display: flex;
+  align-items: center;
+  margin: 5rem 0 15rem 0;
+  padding: 0 5rem;
+}
+
+.cast-details__profile-image {
+  width: 32rem;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1.25rem;
+}
+
+.cast-details__name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.cast-details__content {
+  overflow-y: auto;
+  width: 80%;
+  color: #fff;
+  margin: 10rem 30rem 15rem 0;
+  font-size: 1.5rem;
+}
+
+.cast-details__biography {
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__personal-info {
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__personal-info-label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.cast-details__social-links {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+  color: #fff;
+}
+
+.cast-details__social-links a {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.cast-details__social-links a:hover {
+  color: #e50914;
+}
+
+/* Responsive styles */
+
+@media (max-width: 48rem) {
+  .cast-details {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .cast-details__header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 8rem 0;
+  }
+
+  .cast-details__profile-image {
+    width: 20rem;
+    margin-right: 0;
+  }
+
+  .cast-details__name {
+    font-size: 1.75rem;
+    padding: 3.125rem 0;
+  }
+
+  .cast-details__content {
+    margin: 5rem 0 7.5rem 0;
+    font-size: 1rem;
+  }
+
+  .cast-details__biography,
+  .cast-details__personal-info,
+  .cast-details__personal-info-label {
+    font-size: 1rem;
+  }
+
+  .cast-details__social-links a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 26.75rem) {
+  .cast-details__header {
+    padding: 0;
+  }
+
+  .cast-details__profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    margin-right: 0;
+  }
+}

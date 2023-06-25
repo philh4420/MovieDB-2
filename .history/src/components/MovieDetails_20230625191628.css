@@ -1,0 +1,190 @@
+/* Update the background color and font styles */
+.movie-details {
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Add a subtle box shadow to the movie details container */
+.movie-details__container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust the padding and margin */
+.movie-details__container {
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+/* Style the movie title */
+.movie-details__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Style the movie overview */
+.movie-details__overview {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+/* Style the movie details section */
+.movie-details__info {
+  flex: 1;
+}
+
+/* Style the movie details labels */
+.movie-details__release-date,
+.movie-details__runtime,
+.movie-details__rating,
+.movie-details__genres {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the movie details values */
+.movie-details__release-date,
+.movie-details__runtime {
+  font-weight: bold;
+}
+
+/* Style the trailer button */
+.trailer-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+.trailer-button:hover {
+  background-color: #e20a10;
+}
+
+/* Style the website link */
+.movie-details__website-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.movie-details__website-link:hover {
+  opacity: 0.8;
+}
+
+/* Style the social media section */
+.movie-details__social-media {
+  margin-top: 2.5rem;
+}
+
+/* Style the social media icons */
+.movie-details__social-media-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.movie-details__social-media-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: opacity 0.3s;
+}
+
+.movie-details__social-media-link:hover {
+  opacity: 0.8;
+}
+
+/* Style the cast section */
+.movie-details__cast {
+  margin-top: 3.5rem;
+}
+
+/* Style the cast images */
+.movie-details__cast-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.movie-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.movie-details__cast-image-poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.movie-details__cast-image-name {
+  font-size: 1.2rem;
+  margin-top: 0.625rem;
+}
+
+.movie-details__cast-image-button {
+  background-color: #f40612;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.movie-details__cast-image-button:hover {
+  background-color: #e20a10;
+}
+
+/* Add hover effect to cast images */
+.movie-details__cast-image:hover .movie-details__cast-image-poster {
+  transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .movie-details__container {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+  }
+
+  .movie-details__poster {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .movie-details__cast-images {
+    gap: 1rem;
+  }
+
+  .movie-details__cast-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .movie-details__cast-image-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.6rem;
+  }
+}

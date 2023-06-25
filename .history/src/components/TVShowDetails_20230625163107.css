@@ -1,0 +1,93 @@
+.tv-show-details {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tv-show-details__container {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.tv-show-details__poster {
+  width: 31.25rem;
+}
+
+.tv-show-details__info {
+  flex: 1;
+}
+
+.tv-show-details__overview,
+.tv-show-details__first-air-date,
+.tv-show-details__episode-runtime,
+.tv-show-details__rating,
+.tv-show-details__genres {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.tv-show-details__cast {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tv-show-details__cast-images {
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.tv-show-details__cast-image {
+  width: 12.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.tv-show-details__external-links {
+  margin-top: 2.5rem;
+}
+
+.tv-show-details__external-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.625rem;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.tv-show-details__external-link:last-child {
+  margin-right: 0;
+}
+
+.tv-show-details__external-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .tv-show-details__container {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+
+  .tv-show-details__poster {
+    width: 100%;
+    max-width: 20rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .tv-show-details__cast-images {
+    justify-content: center;
+  }
+
+  .tv-show-details__cast-image {
+    width: 10rem;
+    margin-bottom: 1.875rem;
+  }
+}

@@ -1,0 +1,126 @@
+/* CastDetails.css */
+
+.cast-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cast-details__loading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cast-details__error {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+.cast-details__header {
+  margin-bottom: 20px;
+}
+
+.cast-details__profile-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cast-details__content {
+  max-width: 800px;
+}
+
+.cast-details__name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cast-details__biography {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.cast-details__personal-info {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cast-details__known-for {
+  margin-bottom: 20px;
+}
+
+.cast-details__known-for-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cast-details__known-for-movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cast-details__known-for-movie {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.cast-details__known-for-movie-poster {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cast-details__known-for-movie-details {
+  margin-top: 10px;
+}
+
+.cast-details__known-for-movie-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cast-details__known-for-movie-character {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cast-details__known-for-movie-button {
+  margin-top: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cast-details__personal-info-label {
+  font-weight: bold;
+}
+
+.cast-details__social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cast-details__social-links a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cast-details__social-links a:hover {
+  color: grey;
+}
